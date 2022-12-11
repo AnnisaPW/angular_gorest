@@ -1,0 +1,50 @@
+<div class="topbar">
+  <div id="menu-btn" (click)="toggle()">
+    <h4>Menu</h4>
+  </div>
+</div>
+<div class="view">
+  <div [ngStyle]="isLong ? {'margin-left':'-420px'}: {'margin-left':'0px'}" id="sidebar">
+    <div *ngFor="let item of users" [ngClass]="'listview'">
+
+      <div class="listtile" (click)="getUserDetail(item.id)">
+
+        <div class="text">{{item.name}}</div>
+        <div class="text">{{item.email}}</div>
+      </div>
+
+    </div>
+    <button class="btn-loadmore" (click)="getUserList()" *ngIf="!isLoading1 ; else loading1">Loadmore</button>
+    <ng-template #loading1>
+      <div style="color: white; " class="temp2">
+        Loading ...
+      </div>
+    </ng-template>
+  </div>
+  <div id="content">
+    <ng-template #loading2>
+      <div style="color: white;" class="temp"
+        [ngStyle]="isLong ? {'margin-left':'0', 'padding-left': '45%'}: {'margin-left':'400px', 'padding-left': 'calc(50% - 250px)'} ">
+        Loading ...
+      </div>
+    </ng-template>
+    <div *ngIf="!isLoading2 ; else loading2" id="txt-content"
+      [ngStyle]="isLong ? {'margin-left':'0', 'padding-left': '45%'}: {'margin-left':'400px', 'padding-left': 'calc(50% - 250px)'} ">
+      <div>
+
+        <div class="text" [ngStyle]="selectedId == 0 ?{'color': 'rgb(15, 15, 15)'}:{'color': 'white'}">{{user.id}}</div>
+        <div class="text">{{user.name}}</div>
+        <div class="text">{{user.email}}</div>
+        <div class="text">{{user.gender}}</div>
+        <div class="text">{{user.status}}</div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+</div>

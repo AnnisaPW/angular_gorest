@@ -1,0 +1,139 @@
+.btn {
+  width: 200px;
+}
+
+.topbar {
+  height: 56px;
+  background-color: rgb(35, 35, 35);
+  display: flex;
+  align-items: center;
+}
+
+.view {
+  height: calc(100% - 56px);
+  background-color: rgb(8, 8, 8);
+}
+
+#sidebar {
+  /* width: 25%; */
+  width: 400px;
+  height: calc(100vh - 67px);
+  background-color: rgb(23, 23, 23);
+  float: left;
+  transition: margin-left 350ms ease-in-out;
+  padding: 5px;
+  /* overflow: hidden; */
+  align-items: center;
+  overflow-y: auto;
+  margin-left: 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(39, 39, 39);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #141414;
+}
+
+
+
+.listtile {
+  width: calc(100% - 10px);
+  height: 50px;
+  background-color: rgb(55, 55, 55);
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+
+
+}
+
+.text {
+  color: rgb(220, 216, 216);
+}
+
+.btn-loadmore {
+  margin-top: 10px;
+  margin-left: 11vw;
+  align-items: center;
+}
+
+#content {
+  width: 100%;
+  height: calc(100vh - 56px);
+
+  display: block;
+  justify-content: end;
+
+}
+
+.temp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  padding-left: 45%;
+  align-items: center;
+  margin-left: 0;
+
+}
+
+.temp2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#txt-content {
+
+  transition: margin-left 350ms ease-in-out;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 45%;
+
+  position: fixed;
+
+}
+
+
+#menu-btn {
+  width: 50px;
+  height: 25px;
+  background-color: rgb(47, 47, 47);
+  margin-left: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  color: white;
+}
+
+.txt-content {
+  color: white;
+}
